@@ -1,0 +1,114 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(212,238,174,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.App-header {
+  overflow: visible;
+  width: 100%;
+  text-align: center;
+  color: royalblue;
+}
+
+.Messages-list {
+  padding: 20px 0;
+  max-width: 900px;
+  width: 100%;
+  margin: 10px auto;
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+  background-image: url('./assets/images/wallpaper.jpg');
+  border: 1px solid royalblue;
+  border-radius: 12px;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  /*justify-content: flex-end;*/
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Message-content {
+  display: inline-block;
+  background-color: rgb(177, 195, 228);
+  border-radius: 12px;
+}
+
+.currentMember > .Message-content {
+  align-items: flex-end;
+  background-color: rgb(43, 114, 245);
+}
+
+.Messages-message > .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 10px -10px;
+  border: 1px solid;
+}
+
+.Message-content > .username {
+  display: block;
+  color: yellow;
+  font-size: 14px;
+  padding-bottom: 4px;
+  padding: 7px 7px 0px 7px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: rgb(177, 195, 228);
+  color: black;
+  display: inline-block;
+}
+
+.Message-content > .timestamp {
+  margin: 0 7px;
+  color: azure;
+  font-size: x-small;
+}
+
+.currentMember > .Message-content .text {
+  background-color: rgb(43, 114, 245);
+  color: white;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+input {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid royalblue;
+  flex-grow: 1;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+}
